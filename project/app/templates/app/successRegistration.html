@@ -1,0 +1,12 @@
+{% extends 'app/base.html'%}
+
+{% block title %} Autorize is success! {% endblock %}
+
+{% block content %}
+<div>
+    <p> {{ name }}, поздравляю с успешной регистрацией! Указанные вами данные:</p>
+    <p>Имя: {{ name }}, Email: {{ email }}, Пароль: {{ password }} </p>
+</div>
+
+
+{% endblock %}

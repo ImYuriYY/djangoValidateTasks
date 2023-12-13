@@ -1,0 +1,41 @@
+{% extends 'app/base.html' %}
+
+
+{% block title %} Registration {% endblock %}
+
+
+{% block content %}
+
+<section  class="form-block">
+
+    <div class="form-centering">
+        <form class="form" action="/app/successRegistration/" method="post">
+            {% csrf_token %}
+            <p class="form-title">Регистрация</p>
+            <p class="form-help-text">Создайте учётную запись</p>
+            <div class="form-input-wrapper">
+                {{ form.name.label_tag }}
+                {{ form.name}}
+            </div>
+            <div class="form-input-wrapper">
+                {{ form.email.label_tag }}
+                {{ form.email}}
+            </div>
+            <div class="form-input-wrapper">
+                {{ form.password.label_tag }}
+                {{ form.password}}
+            </div>
+            <div class="form-register-button-wrapper">
+                <button class="form-register-button">
+                    Регистрация
+                </button>
+            </div>
+            <p class="form-help-text">Вернуться к странице входа</p>
+        </form>
+        
+        
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'app/base.html' %}
+
+
+{% block title %} Autorize {% endblock %}
+
+
+{% block content %}
+
+<section  class="form-block">
+
+    <div class="form-centering">
+        <form class="form" action="" method="post">
+            {% csrf_token %}
+            <p class="form-title">Вход</p>
+            <p class="form-help-text">Войдите в учётную запись</p>
+            <div class="form-input-wrapper">
+                {{ form.email.label_tag }}
+                {{ form.email}}
+            </div>
+            <div class="form-input-wrapper">
+                {{ form.password.label_tag }}
+                {{ form.password}}
+            </div>
+            <div class="form-button-wrapper">
+                <button>Войти</button>
+            </div>
+            <div class="form-hr-wrapper">
+                <div class="form-hr"></div>
+                <p class="form-hr-text">Ещё не зарегистрированы?</p>
+                <div class="form-hr"></div>
+            </div>
+        </form>
+        <div class="form-register-button-wrapper">
+            <button class="form-register-button">
+                Регистрация
+            </button>
+        </div>
+    </div>
+
+</section>
+
+{% endblock %}
